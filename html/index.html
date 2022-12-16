@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <!-- Titulo -->
+    <h1 class="titulo">Mi Schedule App </h1>
+
+    <!-- Form Principal -->
+    <form name="form" class="form-ini" action="">
+        <div class="input-form">
+            <label for="task">Hacer:</label>
+            <input type="text" name="task" id="task" required>
+            <label for="time">Hora:</label>
+            <input type="time" name="time" id="time" required>
+        </div>
+        <div class="btn">
+        <button class="btn-add" id="btn-add">Agregar</button>
+        <button class="btn-red" id="btn-clear">Quitar</button>
+        </div>
+    </form>
+    <!-- ------------------------------------------------------------- -->
+    
+    <!-- Main -->
+  
+    <h2>Tareas</h2>
+
+    <!-- Btn dual -->
+        <form action="" class="formEl"">
+            <button id="seleccionar" class="btn-task btn-edit dualBtn">
+                <span>Seleccionar</span>
+                <span class="icon-edit">
+                    <ion-icon name="create-outline"></ion-icon>
+                </span>
+            </button>
+            <button class="btn-task btn-delete" disabled="true">
+                <span>Borrar Seleccion </span>
+                <span class="icon-delete">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </span>
+        </button>
+        </form>   
+    <!-- ------------------------------------------------------------- -->
+
+    <!-- 
+        Contenedor de Tareas
+    -->
+    <div class="none task-container" id="task-container" ></div>
+
+    <!-- ------------------------------------------------------------- -->
+
+
+    <!-- Form Editar -->
+    <div id="modal" class="none">
+        <form name="form" class="form-ini pop" action="">
+            <div class="none">
+                <p class="popup2">¡ COMPLETAR TODOS LOS CAMPOS !</p>
+            </div>
+            <div class="input-form2">
+                <label for="E_task">Hacer:</label>
+                <input type="text" name="E_task" id="E_task" required>
+                <label for="E_time">Hora:</label>
+                <input type="time" name="E_time" id="E_time" required>
+            </div>
+            <div class="btn">
+            <button class="" id="btn-edit">Editar</button>
+            <button class="black" id="btn-cancel">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <!-- ------------------------------------------------------------- -->
+
+    <!-- scrips -->
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
